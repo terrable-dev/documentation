@@ -20,5 +20,5 @@ theme:
 
 nav:
   - Getting started:
-    - /getting-started/introduction.md
-    - /getting-started/installation.md
+    - introduction.md
+    - installation.md
