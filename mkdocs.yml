@@ -1,8 +1,12 @@
 site_name: Terrable
 site_description: Run Terraform APIs locally
+site_url: https://terrable-dev.github.io/documentation/
 
 theme:
   name: material
+  features:
+    - navigation.instant
+    - navigation.instant.progress
 
 nav:
   - Getting started:
