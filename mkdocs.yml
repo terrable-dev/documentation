@@ -20,7 +20,6 @@ theme:
       name: Switch to light mode
 
 nav:
-  - Terrable: index.md
   - Getting started:
-    - introduction.md
+    - index.md
     - installation.md
