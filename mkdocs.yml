@@ -4,11 +4,23 @@ site_url: https://terrable-dev.github.io/documentation/
 
 theme:
   name: material
-  features:
-    - navigation.instant
-    - navigation.instant.progress
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to dark mode
+
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: light blue
+    accent: indigo
+    toggle:
+      icon: material/lightbulb
+      name: Switch to light mode
 
 nav:
+  - Terrable: index.md
   - Getting started:
     - introduction.md
     - installation.md
