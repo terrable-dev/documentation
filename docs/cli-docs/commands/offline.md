@@ -1,4 +1,4 @@
-# Running Locally
+# Offline
 
 Terrable modules can be run locally via the CLI via the `terrable offline` command.
 

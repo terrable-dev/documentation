@@ -23,5 +23,6 @@ nav:
   - Getting started:
     - index.md
     - installation.md
-  - Terrable CLI
-    - cli-docs/running-locally.md
+  - Terrable CLI:
+    - Commands:
+      - cli-docs/commands/offline.md
