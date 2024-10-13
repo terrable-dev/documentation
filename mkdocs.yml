@@ -1,6 +1,7 @@
 site_name: Terrable
 site_description: Run Terraform APIs locally
 site_url: https://terrable-dev.github.io/documentation/
+repo_url: https://github.com/terrable-dev/terrable
 
 theme:
   name: material
@@ -13,12 +14,19 @@ theme:
 
   - media: "(prefers-color-scheme: dark)"
     scheme: slate
-    primary: light blue
+    primary: purple
     accent: indigo
     toggle:
       icon: material/lightbulb
       name: Switch to light mode
+      
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.footer
 
+  icon:
+    repo: fontawesome/brands/github
 nav:
   - Getting started:
     - index.md
@@ -26,3 +34,22 @@ nav:
   - Terrable CLI:
     - Commands:
       - cli-docs/commands/offline.md
+  - Terraform Module:
+    - terraform-docs/minimal-config.md
+    - terraform-docs/http-routing.md
+    - terraform-docs/custom-domains.md
+    - terraform-docs/custom-policies.md
+    - terraform-docs/vpc-assignment.md
+    - terraform-docs/environment-variables.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

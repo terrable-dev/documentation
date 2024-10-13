@@ -11,7 +11,7 @@ terrable offline --file "file.tf" --module "module_name"
 
 You can also specify a `--port` option if you want the local server to start listening on a specific port.
 
-## Setting it up
+## Setting everything up
 
 Assuming you've installed the Terrable CLI, let's start by writing some TypeScript for our 
 endpoint. Create a new file, and we'll call it `TestHandlerSource.ts`.
@@ -75,4 +75,41 @@ the following JSON response:
 {
   "message": "Hello world!"
 }
+```
+
+## Runtimes
+
+Currently, the Terrable CLI only supports Node.js runtimes. It will use whatever version of Node.js you are
+running on your system when executing handler code.
+
+## Live reloading
+
+When running locally, will watch and live-reload any handler files you change without needing to be restarted.
+
+## Options
+
+`terrable offline` can be passed the following options.
+
+### file
+
+The path to the terraform file containing the Terrable API configuration module.
+
+```bash
+terrable offline --file "terraform_file.tf"
+```
+
+### module
+
+The name of the Terrable module in the Terraform file.
+
+```bash
+terrable offline --module "terrable_module"
+```
+
+### port
+
+The port to start a local server on. Defaults to 8080 or any free port if 8080 is taken.
+
+```bash
+terrable offline --port "1234"
 ```
