@@ -3,6 +3,7 @@ site_description: Run Terraform APIs locally
 
 theme:
   name: material
+
 nav:
   - Getting started:
     - introduction.md
