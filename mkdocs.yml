@@ -23,3 +23,8 @@ nav:
   - Getting started:
     - index.md
     - installation.md
+  - Terrable CLI
+    - cli-docs/running-locally.md
+
+plugins:
+  - termynal
