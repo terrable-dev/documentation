@@ -5,17 +5,16 @@ Terrable is a tool for running and debugging AWS API Gateways (defined in Terraf
 Terrable is made up of two components: a Terraform module for deploying API Gateways to AWS
 and a companion CLI tool that can understand and locally run an instance of your configuration for that module.
 
-Terrable was inspired by serverless framework and some of its choice plugins. However, Terraform is a first-class
+Terrable was inspired by Serverless Framework and some of its choice plugins. However, Terraform is a first-class
 citizen in this world. There's not a slow, unreliable CloudFormation stack in sight!
 
 ## Why
 
-Serverless framework is pretty awesome, but you're stuck with CloudFormation and its various limitations
-by using it. There are no resource limits in Terraform - "just break it down into microservices" might be some pretty 
-inconvenient advice.
+Serverless Framework is pretty awesome, but you're stuck with CloudFormation and its various limitations
+by using it. Stack resource limits, slow deployments, `UPDATE_ROLLBACK_FAILED`, to name a few. There are no resource limits in Terraform,
+it's blazing fast to deploy changes, and the state management is excellent.
 
-By providing a Terraform module, we're also able to use other Terraform resources alongside our module.
-
+By providing a Terraform module, you're also able to use other Terraform resources alongside the terrable module. 
 There are also situations where you want to dynamically reference the ARN or Id of various resources, such as in an IAM policy. 
 Well, now it's just Terraform. Just reference it like any other Terraform
 resource! No need to do any hard-coding or funky CloudFormation resource lookups.
