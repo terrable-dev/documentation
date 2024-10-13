@@ -25,6 +25,3 @@ nav:
     - installation.md
   - Terrable CLI
     - cli-docs/running-locally.md
-
-plugins:
-  - termynal
