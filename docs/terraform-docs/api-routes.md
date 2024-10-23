@@ -1,5 +1,7 @@
 # HTTP endpoints
 
+## Declaring endpoints
+
 You can declare one or more HTTP endpoints for your handlers.
 
 ```terraform hl_lines="7 8 9 10"

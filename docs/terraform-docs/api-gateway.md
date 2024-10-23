@@ -1,5 +1,7 @@
 # API gateway
 
+## HTTP vs REST APIs
+
 By default, Terrable will create [HTTP API Gateways (V2)](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html).
 
 However, it is possible to create [REST API Gateways (V1)](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html)

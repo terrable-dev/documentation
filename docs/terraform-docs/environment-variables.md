@@ -1,5 +1,7 @@
 # Environment variables
 
+## Global and individual environment variables
+
 You can set environment variables for your service at a global level, or at the individual
 handler level.
 

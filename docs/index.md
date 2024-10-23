@@ -1,5 +1,7 @@
 # Introduction
 
+## About Terrable
+
 Terrable is a tool for running and debugging AWS API Gateways (defined in Terraform) locally.
 
 Terrable is made up of two components: a Terraform module for deploying API Gateways to AWS

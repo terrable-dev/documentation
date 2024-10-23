@@ -1,5 +1,7 @@
 # Minimal Terraform configuration
 
+## Minimal config example
+
 A minimal Terrable Terraform configuration may look something like the following:
 
 ```terraform

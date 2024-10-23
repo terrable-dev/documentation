@@ -1,5 +1,7 @@
 # Writing handlers
 
+## Minimal handler example
+
 Currently, Terrable supports JavaScript and TypeScript handlers.
 
 Your handler functions should export a function called `handler`, in order to be interpreted correctly

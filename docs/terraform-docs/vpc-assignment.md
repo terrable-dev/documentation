@@ -1,5 +1,7 @@
 # VPC assignment
 
+## Assigning security groups and subnets
+
 To connect your handler to a VPC, you can use the `vpc` variable.
 
 ```terraform  hl_lines="4 5 6 7"

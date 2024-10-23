@@ -1,5 +1,7 @@
 # Custom domains
 
+## Creating a custom domain
+
 If you wish to connect a custom domain to your API, you can use the `http_api` or `rest_api` inputs.
 
 === "HTTP API (V2)"

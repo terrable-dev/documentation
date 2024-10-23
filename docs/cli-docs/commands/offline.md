@@ -1,5 +1,7 @@
 # Offline
 
+## The 'terrable offline' command
+
 Terrable modules can be run locally via the CLI via the `terrable offline` command.
 
 The file name and terraform module name need to be passed to the command using the `--file` and `--module` flags.

@@ -1,5 +1,7 @@
 # Custom policies
 
+## Global and individual policies
+
 You can assign policies to individual handlers, and also globally at the service level.
 
 ## Global policies

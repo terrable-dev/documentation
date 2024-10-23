@@ -1,5 +1,7 @@
 # Installation
 
+## Release artifacts
+
 All release artifacts are provided via the [GitHub Releases](https://github.com/terrable-dev/terrable/releases), if you would like to install manually
 or as a workaround if your preferred installation method is not available.
 
