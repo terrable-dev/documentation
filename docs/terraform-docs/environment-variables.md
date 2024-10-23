@@ -7,7 +7,7 @@ handler level.
 
 You can set the `global_environment_variables` input to specify global environment variables:
 
-```terraform
+```terraform hl_lines="4 5 6"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"
@@ -34,7 +34,7 @@ This will set the env var `GLOBAL_ONE=global-value` in all of your deployed hand
 
     Try something like:
 
-    ```terraform
+    ```terraform hl_lines="1 2 3 9"
     resource "aws_sqs_queue" "sqs_queue" {
       name = "my-sqs-queue"
     }
@@ -63,7 +63,7 @@ This will set the env var `GLOBAL_ONE=global-value` in all of your deployed hand
 You can set environment variables for individual handlers by passing an `environment_variables`
 value into your handler declarations:
 
-```terraform
+```terraform hl_lines="6 7 8"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"

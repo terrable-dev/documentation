@@ -2,7 +2,7 @@
 
 To connect your handler to a VPC, you can use the `vpc` variable.
 
-```terraform
+```terraform  hl_lines="4 5 6 7"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"

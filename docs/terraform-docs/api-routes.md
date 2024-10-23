@@ -1,8 +1,8 @@
-# HTTP routing
+# HTTP endpoints
 
-You can declare one or more HTTP routes for your handlers.
+You can declare one or more HTTP endpoints for your handlers.
 
-```terraform
+```terraform hl_lines="7 8 9 10"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"
@@ -18,7 +18,25 @@ module "simple_api" {
 }
 ```
 
-This configuration will allow you to invoke the `TestHandler` with **both** a `GET` and a `POST`
+This configuration will allow you to invoke the `TestHandler` with a
+request to the `/route` endpoint.
+
+```terraform hl_lines="7 8 9"
+module "simple_api" {
+  source = "terrable-dev/terrable-api/aws"
+  api_name = "my-api"
+  handlers = {
+    TestHandler: {
+        source = "./TestHandlerSource.ts"
+        http = {
+          GET   = "/route"
+        }
+    }
+  }
+}
+```
+
+This configuration will allow you to invoke the `TestHandler` with _both_ a `GET` and a `POST`
 request to the `/route` endpoint.
 
 ## Path parameters
@@ -27,7 +45,7 @@ Variable path parameters can be specified with the `{curly}` syntax.
 
 For example:
 
-```terraform
+```terraform hl_lines="7 8 9"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"

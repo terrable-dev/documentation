@@ -31,18 +31,23 @@ nav:
   - Getting started:
     - index.md
     - installation.md
+    - writing-handlers.md
   - Terrable CLI:
     - Commands:
       - cli-docs/commands/offline.md
   - Terraform Module:
     - terraform-docs/minimal-config.md
-    - terraform-docs/http-routing.md
+    - terraform-docs/api-gateway.md
+    - terraform-docs/api-routes.md
     - terraform-docs/custom-domains.md
     - terraform-docs/custom-policies.md
     - terraform-docs/vpc-assignment.md
     - terraform-docs/environment-variables.md
 
 markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span

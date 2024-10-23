@@ -7,7 +7,7 @@ You can assign policies to individual handlers, and also globally at the service
 To set global policies that will be applied to every handler, the `global_policies` input can
 be used.
 
-```terraform
+```terraform hl_lines="4 5 6 7"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"
@@ -34,7 +34,7 @@ to every handler in your configuration.
 To specify policies for individual handlers, the `policies` attribute can be set when
 declaring a handler.
 
-```terraform
+```terraform hl_lines="6 7 8"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"
