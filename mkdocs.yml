@@ -43,7 +43,7 @@ nav:
     - terraform-docs/custom-policies.md
     - terraform-docs/vpc-assignment.md
     - terraform-docs/environment-variables.md
-  - Limitations
+  - Limitations:
     - limitationds.md
 
 markdown_extensions:
