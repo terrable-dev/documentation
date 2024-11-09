@@ -9,11 +9,12 @@ handler level.
 
 You can set the `global_environment_variables` input to specify global environment variables:
 
-```terraform hl_lines="4 5 6"
+```terraform hl_lines="4 5 6 7"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"
   global_environment_variables = {
+    # will provide these variables to all handlers
     GLOBAL_ONE = "global-value"
   }
   handlers = {
@@ -65,13 +66,14 @@ This will set the env var `GLOBAL_ONE=global-value` in all of your deployed hand
 You can set environment variables for individual handlers by passing an `environment_variables`
 value into your handler declarations:
 
-```terraform hl_lines="6 7 8"
+```terraform hl_lines="6 7 8 9"
 module "simple_api" {
   source = "terrable-dev/terrable-api/aws"
   api_name = "my-api"
   handlers = {
     TestHandler: {
         environment_variables = {
+          # will provide these variables to only 'TestHandSler'
           LOCAL_HANDLER_ONE = "local-value"
         }
         source = "./TestHandlerSource.ts"

@@ -2,7 +2,7 @@
 
 ## Assigning security groups and subnets
 
-To connect your handler to a VPC, you can use the `vpc` variable.
+To run your handlers inside a VPC, you can use the `vpc` variable.
 
 ```terraform  hl_lines="4 5 6 7"
 module "simple_api" {
@@ -29,6 +29,6 @@ This will connect all your handlers to the specified subnets and security groups
   
     Specifying a VPC configuration may significantly slow down the _initial_ deployment
     of your service. With this setting, there's some additional networking configuration 
-    that is configured on the AWS side.
+    that needs to be done on the AWS side.
 
     However, subsequent deployments should be much faster.
