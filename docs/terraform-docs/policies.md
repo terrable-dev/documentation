@@ -1,4 +1,4 @@
-# Custom policies
+# Assigning policies
 
 ## Global and individual policies
 
