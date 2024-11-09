@@ -32,6 +32,7 @@ nav:
     - index.md
     - installation.md
     - writing-handlers.md
+    - limitations.md
   - Terrable CLI:
     - Commands:
       - cli-docs/commands/offline.md
@@ -43,8 +44,6 @@ nav:
     - terraform-docs/custom-policies.md
     - terraform-docs/vpc-assignment.md
     - terraform-docs/environment-variables.md
-  - Limitations:
-    - limitations.md
 
 markdown_extensions:
   - pymdownx.superfences
