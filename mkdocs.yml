@@ -43,6 +43,8 @@ nav:
     - terraform-docs/custom-policies.md
     - terraform-docs/vpc-assignment.md
     - terraform-docs/environment-variables.md
+  - Limitations
+    - limitationds.md
 
 markdown_extensions:
   - pymdownx.superfences

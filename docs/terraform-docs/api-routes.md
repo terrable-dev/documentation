@@ -55,7 +55,7 @@ module "simple_api" {
     TestHandler: {
         source = "./TestHandlerSource.ts"
         http = {
-          GET = "/users/{id}"
+          GET = "/users/{id}" # e.g. /users/123
         }
     }
   }

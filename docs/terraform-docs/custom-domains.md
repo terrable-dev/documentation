@@ -11,7 +11,7 @@ If you wish to connect a custom domain to your API, you can use the `http_api` o
       source = "terrable-dev/terrable-api/aws"
       api_name = "my-api"
       http_api = {
-        custom_domain   = "testdomain.test.com"
+        custom_domain   = "testdomain.test.com" # configure this custom domain for the API
       }
       handlers = {
         TestHandler: {
@@ -31,7 +31,7 @@ If you wish to connect a custom domain to your API, you can use the `http_api` o
       source = "terrable-dev/terrable-api/aws"
       api_name = "my-api"
       rest_api = {
-        custom_domain   = "testdomain.test.com"
+        custom_domain   = "testdomain.test.com" # configure this custom domain for the API
       }
       handlers = {
         TestHandler: {
@@ -64,8 +64,8 @@ If you already have an ACM certificate configured, you can pass it in alongside 
       source = "terrable-dev/terrable-api/aws"
       api_name = "my-api"
       http_api = {
-        custom_domain   = "testdomain.test.com"
-        certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/existing-cert-id"
+        custom_domain   = "testdomain.test.com" # configure this custom domain for the API
+        certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/existing-cert-id" # use this certificate for TLS
       }
       handlers = {
         TestHandler: {
@@ -83,8 +83,8 @@ If you already have an ACM certificate configured, you can pass it in alongside 
       source = "terrable-dev/terrable-api/aws"
       api_name = "my-api"
       rest_api = {
-        custom_domain   = "testdomain.test.com"
-        certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/existing-cert-id"
+        custom_domain   = "testdomain.test.com" # configure this custom domain for the API
+        certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/existing-cert-id" # use this certificate for TLS
       }
       handlers = {
         TestHandler: {

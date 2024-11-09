@@ -13,3 +13,11 @@ You can install Terrable on Windows using scoop.
 scoop bucket add terrable https://github.com/terrable-dev/scoop.git
 scoop install terrable
 ```
+
+## Go
+
+You can install Terrable using Go.
+
+```bash
+go install github.com/terrable-dev/terrable@latest
+```

@@ -53,15 +53,40 @@ You can use the following syntax to define either an HTTP API or a REST API.
     }
     ```
 
-## Limitations
+## Endpoint Types
 
-### Stages 
+### Regional
 
-Terrable does not support stages in API Gateway, and instead substitutes a `default` stage where
-applicable. This has some upsides: You typically don't need to worry about deploying a stage, as
-terrable will do this for you. It also simplifies the usage of the module.
+By default, Terrable will configure REST API Gateways (V1) with the `REGIONAL` endpoint type.
 
-If you depend on stages then Terrable probably isn't right for you at this moment in time.
+HTTP API Gateways (V2) only support `REGIONAL` [endpoint types](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html).
 
-If you want to deploy multiple versions of the module (i.e. for production, staging, test environments)
-then approach it as you would any other Terraform module in your infrastructure.
+### Private
+
+When using REST API Gateways (V1), the `PRIVATE` endpoint can be configured via the Terrable module using the following options:
+
+- `rest_api.endpoint_type` can be set to `PRIVATE`
+- `rest_api.vpc_endpoint_ids` takes an array of VPC Endpoints that should be able allowed to invoke the API Gateway.
+
+```terraform hl_lines="4 5 6 7"
+module "simple_api" {
+  source = "terrable-dev/terrable-api/aws"
+  api_name = "my-api"
+  rest_api = {
+    endpoint_type    = "PRIVATE"    # Configures the API endpoints as 'PRIVATE'
+    vpc_endpoint_ids = ["vpce-id"]  # The VPC Endpoints to be used to generate the resource policy
+  }
+  handlers = {
+    TestHandler: {
+        source = "./TestHandlerSource.ts"
+        http = {
+          GET   = "/route"
+        }
+    }
+  }
+}
+```
+
+This configuration will create a REST API that can only be invoked from the provided VPC Endpoints.
+
+This allows you to secure an API Gateway to your VPC.
